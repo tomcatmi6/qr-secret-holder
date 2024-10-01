@@ -3,8 +3,13 @@
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
 
-const QrScanner = dynamic(() => import('react-qr-scanner'), { ssr: false });
-
+const QrScanner = dynamic<QRCodeScannerProps>(() => import('react-qr-scanner'), { ssr: false });
+interface QRCodeScannerProps {
+  delay?: number;
+  onError?: (error: Error) => void;
+  onScan?: (result: { text: string } | null) => void;
+  style?: React.CSSProperties;
+}
 const QRScanner: React.FC = () => {
   const [scanResult, setScanResult] = useState<string | null>(null);
 
@@ -14,7 +19,7 @@ const QRScanner: React.FC = () => {
     }
   };
 
-  const handleError = (err: any) => {
+  const handleError = (err: unknown) => {
     console.error(err);
   };
 
