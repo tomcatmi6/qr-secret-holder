@@ -10,7 +10,7 @@ export default function Home() {
       <QRCodeGenerator />
       <div style={{ textAlign: 'center', marginTop: '30px' }}>
         <Link href="/scan">
-          <a style={{ color: 'blue', textDecoration: 'underline' }}>Go to QR Code Scanner</a>
+          <span style={{ color: 'blue', textDecoration: 'underline' }}>Go to QR Code Scanner</span>
         </Link>
       </div>
       </main>

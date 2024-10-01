@@ -1,4 +1,4 @@
-import QRScanner from './components/QRScanner';
+import QRScanner from '../components/QRScanner';
 import Link from 'next/link';
 
 const ScanPage: React.FC = () => {
@@ -7,7 +7,7 @@ const ScanPage: React.FC = () => {
       <QRScanner />
       <div style={{ textAlign: 'center', marginTop: '30px' }}>
         <Link href="/">
-          <a style={{ color: 'blue', textDecoration: 'underline' }}>Go back to QR Code Generator</a>
+          <span style={{ color: 'blue', textDecoration: 'underline' }}>Go back to QR Code Generator</span>
         </Link>
       </div>
     </div>

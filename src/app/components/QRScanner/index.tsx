@@ -1,7 +1,8 @@
+"use client";
+
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
 
-// Używamy dynamicznego importu, ponieważ react-qr-scanner wymaga dostępu do przeglądarki
 const QrScanner = dynamic(() => import('react-qr-scanner'), { ssr: false });
 
 const QRScanner: React.FC = () => {
